@@ -1,0 +1,85 @@
+<main id="main">
+    <ul class="feature-list">
+        <include src="./components/main/features/feature.html"></include>
+    </ul>
+    <figure class="main-download">
+        <img src="../assets/images/backgroundVersion.svg"/>
+        <article class="main-download-content">
+            <h1>Get Your Free Version</h1>
+            <p>Having used discount toner cartridges for twenty years, there
+                have been a lot of changes in the toner cartridge market. The
+                market today is approximately a twenty billion dollar business.</p>
+            <button class="btn-download">Download</button>
+        </article>
+    </figure>
+    <ul class="testimonial-list">
+        <include src="./components/main/testimonials/testimonial.html"></include>
+    </ul>
+    <section class="plan">
+        <include
+            src="./components/common/title.html"
+            locals='{
+            "title": "Choose your plan"
+            }'></include>
+
+        <ul class="plan-list">
+            <include
+                src="./components/main/plan/plan-item.html"
+                locals='{
+                "type": "silver",
+                "unitCost": "$",
+                "cost": "49",
+                "unitTime": "year",
+                "classType": "plan-silver",
+                "classOverlay": "plan-silver-overlay",
+                "descriptions": "[`Personal Account`, `25 GB Discspace`, `50Uploads per day`]"
+                }'></include>
+            <include
+                src="./components/main/plan/plan-item.html"
+                locals='{
+                "type": "gold",
+                "unitCost": "$",
+                "cost": "99",
+                "unitTime": "year",
+                "classType": "plan-gold",
+                "classOverlay": "plan-gold-overlay",
+                "descriptions": "[`Personal Account`, `50 GB Discspace`, `500Uploads per day`]"
+                }'></include>
+            <include
+                src="./components/main/plan/plan-item.html"
+                locals='{
+                "type": "platinum",
+                "unitCost": "$",
+                "cost": "299",
+                "unitTime": "year",
+                "classType": "plan-platinum",
+                "classOverlay": "plan-platinum-overlay",
+                "descriptions": "[`Personal Account`, `500 GB Discspace`,`Unlimited Uploads per day`]"
+                }'></include>
+        </ul>
+        <ul class="plan-option__container">
+            <li class="plan-option__item">
+                <p>Silver</p>
+            </li>
+            <li class="plan-option__item plan-option__choose">
+                <p>Gold</p>
+            </li>
+            <li class="plan-option__item">
+                <p>Platinum</p>
+            </li>
+        </ul>
+    </section>
+    <include
+        src="./components/main/portifolio/portifolio.html"
+    >
+    </include>
+    <include
+        src="./components/main/team/team.html"
+    >
+    </include>
+    <include
+    src="./components/main/contact/contact.html"
+    >
+    </include> 
+    
+        </main>

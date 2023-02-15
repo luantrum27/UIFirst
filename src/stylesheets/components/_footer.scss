@@ -1,0 +1,295 @@
+@use "../abstracts/" as *;
+.footer {
+    width: 100%;
+    padding: 38px 151px 51px 151px;
+    background: #4b4b4b;
+    gap: 316px;
+    @include flex();
+    @include tablet() {
+        width: 100%;
+        padding: 25px 24px 40px 24px;
+        gap: 145px;
+    }
+    @include mobile() {
+        padding: 25px 15px;
+        gap: 145px;
+        @include flex($justify: center, $direction: column);
+    }
+
+    .footer__purpose {
+        width: 280px;
+        @include tablet() {
+            width: 220px;
+        }
+        @include mobile() {
+            width: 290px;
+            margin: 0 auto;
+        }
+        .footer__purpose-title {
+            @include textDefault();
+            font-size: 36px;
+            line-height: 42px;
+            letter-spacing: 0.0554719em;
+            color: #ebcb80;
+            text-transform: uppercase;
+            @include tablet() {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            @include mobile() {
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
+        .footer__purpose-content {
+            @include textDefault();
+            font-size: 18px;
+            line-height: 24px;
+            color: #ffffff;
+            margin-top: 8px;
+            margin-bottom: 24px;
+            @include tablet() {
+                font-size: 12px;
+                line-height: 16px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            @include mobile() {
+                font-size: 12px;
+                line-height: 16px;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+        }
+        .footer__license {
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            @include tablet() {
+                font-size: 11px;
+                line-height: 16px;
+            }
+        }
+        .footer__form {
+            @include flex($direction: column);
+            gap: 19;
+            @include tablet() {
+            }
+            @include mobile() {
+                @include flex($direction: column, $justify: center, $align: center);
+            }
+        }
+        .input__subcribe {
+            width: 262px;
+            height: 48px;
+            position: relative;
+            border: 1px solid #7d7d7d;
+            border-radius: 4px;
+            @include tablet() {
+                width: 158px;
+                height: 23.58px;
+                border-radius: 2.13333px;
+                border: 0.533333px solid #7d7d7d;
+            }
+            @include tablet() {
+                width: 158px;
+                height: 23.58px;
+                border-radius: 2.13333px;
+                border: 0.533333px solid #7d7d7d;
+            }
+            #email_subcribe {
+                width: 100%;
+                height: 48px;
+                border: 1px solid #7d7d7d;
+                border-radius: 4px;
+                background-color: transparent;
+                font-size: 16px;
+                line-height: 27px;
+                color: #ffffff;
+                mix-blend-mode: normal;
+                opacity: 0.5;
+                padding: 10px 18px;
+                @include tablet() {
+                    height: 23.58px;
+                    font-size: 11px;
+                    line-height: 14px;
+                    mix-blend-mode: normal;
+                    padding: 3.62px 42px 5.56px 8.31px;
+                }
+                @include tablet() {
+                    height: 23.58px;
+                    font-size: 11px;
+                    line-height: 14px;
+                    mix-blend-mode: normal;
+                    padding: 3.62px 42px 5.56px 8.31px;
+                }
+            }
+            .btn__subcribe {
+                @include absolute($right: 0);
+                width: 51px;
+                height: 48px;
+                background: #ebcb80;
+                line-height: 48px;
+                border: none;
+                @include tablet() {
+                    width: 25.11px;
+                    height: 23.58px;
+                    line-height: 23.58px;
+                }
+                @include mobile() {
+                    width: 25.11px;
+                    height: 23.58px;
+                    line-height: 23.58px;
+                }
+                svg {
+                    @include tablet() {
+                        width: 3.94px;
+                        height: 7.86px;
+                    }
+                    @include mobile() {
+                        width: 3.94px;
+                        height: 7.86px;
+                    }
+                }
+            }
+        }
+    }
+    .footer__information {
+        margin-top: 50px;
+        max-width: 766px;
+        @include tablet() {
+            margin-top: 35px;
+        }
+        @include mobile() {
+            margin-top: -120px;
+            @include flex($direction: column);
+        }
+        .footer__categories {
+            @include flex($justify: space-between);
+            gap: 93;
+            @include tablet() {
+                gap: 75;
+            }
+            @include mobile() {
+                gap: 10;
+                @include flex($justify: space-around);
+            }
+            .footer__category {
+                @include flex($direction: column);
+                gap: 12;
+                @include tablet() {
+                    gap: 8;
+                }
+                .footer__category--item {
+                    a {
+                        @include textDefault();
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #fff;
+                        @include tablet() {
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                        @include mobile() {
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer__social-media {
+        margin-top: 47px;
+        margin-left: calc(50% - 75px);
+        
+        @include tablet() {
+            margin-top: 40px;
+            margin-left: calc(50% - 50px);
+        }
+        @include mobile() {
+            
+            max-width: 766px;
+            margin-left: 0;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 32px;
+        }
+        .footer__label {
+            @include mobile() {
+                text-align: center;
+            }
+        }
+        .footer__list-media {
+            @include flex($align: center);
+            gap: 33;
+            margin-top: 23px;
+            @include tablet() {
+                gap: 20;
+                margin-top: 14px;
+            }
+            @include mobile() {
+                gap: 20;
+                margin: 0 auto;
+                margin-top: 12px;
+                width: 100%;
+            }
+            .footer__media-link {
+                svg {
+                    @include tablet() {
+                        width: 18px;
+                        height: 18px;
+                    }
+                    @include mobile() {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__label {
+    @include textDefault();
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.0555556em;
+    color: #ffffff;
+    margin-top: 25px;
+    text-transform: uppercase;
+    @include tablet() {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.0666667em;
+    }
+}
+
+.d-none {
+    display: block;
+    @include tablet() {
+        display: block;
+    }
+    @include mobile() {
+        display: none;
+    }
+}
+
+.footer__license--mobile {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    display: none;
+    @include tablet() {
+        display: none;
+    }
+    @include mobile() {
+        display: block;
+        font-size: 11px;
+        line-height: 16px;
+        margin-top: -130px;
+        text-align: center;
+    }
+}

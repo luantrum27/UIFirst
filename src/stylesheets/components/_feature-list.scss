@@ -1,0 +1,115 @@
+@use "../abstracts/" as *;
+#feature {
+    width: 100%;
+    .feature-group-heading {
+        margin: 80px 72px 55px 72px;
+        @include tablet() {
+            margin: 42px auto 49px auto;
+        }
+        @include mobile() {
+            margin: 42px auto 40px auto;
+        }
+        .feature-sub-title {
+            @include formatText($fontSize: 12px, $color: #4B4B4B, $lineHeight: 24px, $textTransform: uppercase, $textAlign: center);
+        }
+    }
+    .feature-content {
+        @include flex($align: center);
+        margin: 0 72px 59px 72px;
+        @include tablet() {
+            margin: 0 0 40px 0;
+        }
+        @include mobile() {
+            margin: 28px 15px 38px 15px;
+            @include flex($direction: column);
+        }
+        .feature-list {
+            margin-left: 90px;
+            @include tablet() {
+                margin-left: 50px;
+            }
+            @include mobile() {
+                margin-left: 17px;
+            }
+            .feature-item {
+                margin-top: 44px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                @include flex();
+                @include tablet() {
+                    margin-top: 72px;
+                }
+                @include tablet() {
+                    margin-top: 40px;
+                }
+                .feature-icon {
+                    width: 53px;
+                    height: 44px;
+                    margin-right: 20px;
+                    img {
+                        width: 100%;
+                    }
+                    @include tablet() {
+                        width: 39px;
+                        height: 33px;
+                        margin-right: 14px;
+                    }
+                }
+                .feature-item-content {
+                    width: 262px;
+                    @include tablet() {
+                        width: 212.67px;
+                    }
+                    @include mobile() {
+                        width: 202.25px;
+                    }
+                    h5 {
+                        margin-top: -10px;
+                        @include formatText($fontSize: 16px, $color: #4B4B4B, $lineHeight: 30px, $letterSpacing: 0.0555556em, $textTransform: uppercase, $textAlign: left);
+                        @include tablet() {
+                            margin-top: -5px;
+                            margin-bottom: 5px;
+                            @include formatText($fontSize: 12px, $color: #4B4B4B, $lineHeight: 16px, $letterSpacing: 0.0666667em, $textTransform: uppercase, $textAlign: left);
+                        }
+                        @include mobile() {
+                            margin-top: -4px;
+                            margin-bottom: 8px;
+                            @include formatText($fontSize: 12px, $color: #4B4B4B, $lineHeight: 16px, $letterSpacing: 0.0666667em, $textTransform: uppercase, $textAlign: left);
+                        }
+                    }
+                    p {
+                        @include formatText($fontSize: 16px, $color: #4B4B4B, $lineHeight: 24px, $textAlign: left);
+                        @include tablet() {
+                            @include formatText($fontSize: 11px, $color: #4B4B4B, $lineHeight: 16px, $textAlign: left);
+                        }
+                    }
+                }
+            }
+        }
+        .feature-image {
+            width: 802px;
+            height: 464px;
+            margin-left: 69px;
+            img {
+                width: 100%;
+                @include tablet() {
+                    width: 802px;
+                }
+                @include mobile() {
+                    max-width: 280px;
+                }
+            }
+            @include tablet() {
+                overflow: hidden;
+                margin-left: 8.33px;
+            }
+            @include mobile() {
+                width: 290px;
+                height: 168.32px;
+                overflow: visible;
+                margin-top: 37px;
+            }
+        }
+    }
+}

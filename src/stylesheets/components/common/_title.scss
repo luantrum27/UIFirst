@@ -1,0 +1,13 @@
+@use "../../abstracts/" as *;
+.title {
+    margin-bottom: 32px;
+    @include formatText($fontSize: 44px, $color: #4B4B4B, $lineHeight: 48px, $letterSpacing: -0.0363636em, $textTransform: uppercase, $textAlign: center);
+    @include tablet() {
+        margin-bottom: 22px;
+        @include formatText($fontSize: 32px, $color: #4B4B4B, $lineHeight: 40px, $letterSpacing: -0.025em, $textTransform: uppercase, $textAlign: center);
+    }
+    @include mobile() {
+        margin-bottom: 3px;
+        @include formatText($fontSize: 20px, $color: #4B4B4B, $lineHeight: 40px, $letterSpacing: -0.025em, $textTransform: uppercase, $textAlign: center);
+    }
+}

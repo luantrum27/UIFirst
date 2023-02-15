@@ -1,0 +1,23 @@
+<li class="testimonial__item">
+    <figure class="testimonial__avatar">
+        <img class="avatar__image" src="{{ avatar }}"/>
+    </figure>
+    <article class="testimonial__information">
+        <h5 class="testimonial__information-name">{{ name }}</h5>
+        <article class="testimonial__job-wrapper">
+            <p class="testimonial__information-job">{{ job }}</p>
+        </article>
+        <div class="testimonial__line"></div>
+        <article class="testimonial__content-wrapper">
+            <p class="testimonial__content">{{ testimonial }}</p>
+        </article>
+        <ul class="testimonial__media">
+            <include
+                src="./components/main/testimonials/testimonial-media.html"
+                locals='{
+                "listIcon": "{{ data }}"
+                }'>
+            </include>
+        </ul>
+    </article>
+</li>

@@ -1,0 +1,202 @@
+@use "../abstracts/" as *;
+.contact {
+    padding: 67px 156px 67px 121px;
+    width: 100%;
+    @include tablet() {
+        padding: 34px 86px 40px 86px;
+    }
+    @include mobile() {
+        padding: 23px 40px 40px 40px;
+    }
+    .contact__content {
+        margin-top: -60px;
+        @include flex($direction: row);
+        gap: 60;
+        @include tablet() {
+            gap: 30;
+        }
+        @include mobile() {
+            gap: 30;
+            @include flex($direction: column);
+        }
+        .contact__image-container {
+            width: 314px;
+
+        }
+        .contact__image-responsive {
+            display: block;
+            @include tablet() {
+                display: none;
+            }
+            @include mobile() {
+                display: none;
+            }
+        }
+
+        .contact__form {
+            margin-top: 110px;
+            flex: 1;
+            .contact__form-row {
+                flex: 1;
+                @include flex($align: center);
+                gap: 29;
+                @include tablet() {
+                    gap: 16.76px;
+                }
+                @include tablet() {
+                    gap: 11px;
+                }
+                .contact__form-input {
+                    flex: 1;
+                    @include textDefault();
+                    font-size: 18px;
+                    line-height: 27px;
+                    letter-spacing: 0.01em;
+                    color: #7d7d7d;
+                    margin-bottom: 38px;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #7d7d7d;
+                    background-color: transparent;
+                    @include tablet() {
+                        font-size: 11px;
+                        line-height: 16px;
+                        padding: 0 0 5px 0;
+                    }
+                    @include mobile() {
+                        width: 114px;
+                    }
+                }
+            }
+            .btn__contact-submit {
+                width: 210px;
+                height: 48px;
+                background: #ebcb80;
+                border-radius: 50px;
+                outline: none;
+                border: none;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.0625em;
+                color: #3c3c3c;
+                @include textDefault();
+                text-transform: uppercase;
+                display: block;
+                @include tablet() {
+                    width: 140px;
+                    height: 32px;
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: 0.0727273em;
+                }
+                @include mobile() {
+                    margin-top: -15px;
+                }
+            }
+        }
+        .contact__information {
+            margin-top: 100px;
+            flex: 1;
+            @include flex($direction: column);
+            gap: 26;
+            @include tablet() {
+                gap: 16;
+                margin-top: 120px;
+            }
+            @include mobile() {
+                gap: 16;
+                margin-top: 0px;
+            }
+            .contact__information--item {
+                @include flex($align: center);
+                gap: 15;
+                @include mobile() {
+                    justify-content: center;
+                }
+                
+                .contact__information--icon {
+                    width: 17px;
+                    svg {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .contact__information--content {
+                    @include textDefault();
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #4b4b4b;
+                    @include tablet {
+                        font-size: 11px;
+                        line-height: 16px;
+                        width: 226px;
+                    }
+                }
+            }
+            .contact__media {
+                @include flex();
+                gap: 33;
+                @include tablet() {
+                    margin-top: 6px;
+                }
+                @include mobile() {
+                    margin-top: 29px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+.contact__rectangle {
+    width: 100%;
+    height: 400px;
+    background: #d8d8d8;
+    margin-top: -95px;
+    @include tablet() {
+        height: 216px;
+        background-color: #fff;
+        margin-top: -0px;
+    }
+    @include relative();
+    .contact__location {
+        padding: 21px 16px 8px 29px;
+        width: 190px;
+        height: 70px;
+        background: linear-gradient(191.52deg, rgba(255, 255, 255, 0.301404) 5.01%, rgba(255, 255, 255, 0.0001) 91.53%),
+            #ebcb80;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        @include absolute($top: 201px, $right: 489px);
+        @include tablet() {
+            @include absolute($top: 67px, $right: 206px);
+        }
+        @include tablet() {
+            @include absolute($top: 92px, $right: 53px);
+        }
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 12px solid #ebcb80;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(
+                    191.52deg,
+                    rgba(255, 255, 255, 0.301404) 5.01%,
+                    rgba(255, 255, 255, 0.0001) 91.53%
+                ),
+                #ebcb80;
+            @include absolute($bottom: -12px, $left: 50%);
+            transform: translateX(-50%);
+            z-index: 6;
+        }
+        p {
+            @include textDefault();
+            font-size: 12px;
+            line-height: 14px;
+            color: #4b4b4b;
+        }
+    }
+}

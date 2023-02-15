@@ -1,0 +1,108 @@
+@use "../abstracts/" as *;
+.team {
+    &__content {
+        @include relative();
+        .team__image--container {
+            width: 100%;
+            @include tablet() {
+                width: 100%;
+            }
+            @include mobile() {
+                width: 100%;
+                overflow: hidden;
+            }
+            .team__content--image {
+                width: 100%;
+                @include tablet() {
+                    width: 100%;
+                }
+                @include mobile() {
+                    width: 768px;
+                }
+            }
+        }
+        &--information {
+            @include absolute($top: 229px, $right: 248px);
+            color: #fff;
+            @include tablet() {
+                @include absolute($top: 103px, $right: 87px);
+            }
+            @include mobile() {
+                @include absolute($top: 34px, $right: 40px, $bottom: 76px, $left: 40px);
+            }
+            .team__information--name {
+                @include textDefault();
+                font-size: 32px;
+                line-height: 42px;
+                letter-spacing: -0.025em;
+                @include tablet() {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                @include mobile() {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+            .team__information--job {
+                @include textDefault();
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 0.0555556em;
+                margin-top: 7px;
+                margin-bottom: 22px;
+                @include tablet() {
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-top: 5px;
+                    margin-bottom: 16px;
+                }
+            }
+            .team__information--description {
+                width: 360px;
+                @include tablet() {
+                    width: 282px;
+                }
+                @include mobile() {
+                    width: 240px;
+                }
+                p {
+                    @include textDefault();
+                    font-size: 16px;
+                    line-height: 24px;
+                    @include tablet() {
+                        font-size: 11px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .team__content--dots {
+            @include absolute($right: 149px, $top: 335px);
+            @include flex($direction: column);
+            gap: 11.43;
+            @include tablet() {
+                @include absolute($right: 37px, $top: 179px);
+                gap: 9.13;
+            }
+            @include mobile() {
+                @include flex($direction: row);
+                @include absolute($top: 275px, $right: 50%);
+                transform: translateX(50%);
+            }
+            .team__dots--item {
+                width: 10px;
+                height: 10px;
+                border: 2px solid #ffffff;
+                border-radius: 7.5px;
+                @include tablet() {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            .dotted {
+                background-color: #fff;
+            }
+        }
+    }
+}

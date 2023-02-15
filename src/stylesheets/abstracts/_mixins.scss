@@ -1,0 +1,118 @@
+@use "variables" as *;
+
+// Media-Query Mixin
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+  
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+// Flex
+@mixin flex(
+    $direction: false,
+    $align: false,
+    $justify: false,
+    $wrap: false
+) {
+    display: flex;
+    @if $direction {
+        flex-direction: $direction;
+    }
+
+    @if $align {
+        align-items: $align;
+    }
+
+    @if $justify {
+        justify-content: $justify;
+    }
+
+    @if $wrap {
+        flex-wrap: $wrap;
+    }
+}
+
+@mixin position(
+    $position,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null
+    
+) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+  }
+  
+
+@mixin relative($args...) {
+    @include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+@mixin formatText(
+    $fontFamily: Roboto,
+    $fontStyle: normal,
+    $fontSize: 16px,
+    $fontWeight: 400,
+    $lineHeight: 24px,
+    $color: #FFFFFF,
+    $textTransform: none,
+    $letterSpacing: null,
+    $textAlign: none,
+) {
+    @if $fontFamily {
+        font-family: $fontFamily;
+    }
+    @if $fontSize {
+        font-size: $fontSize;
+    }
+    @if $fontStyle {
+        font-style: $fontStyle;
+    }
+    @if $lineHeight {
+        line-height: $lineHeight;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $textTransform {
+        text-transform: $textTransform;
+    }
+    @if $letterSpacing {
+        letter-spacing: $letterSpacing;
+    }
+    @if $textAlign {
+        text-align: $textAlign;
+    }
+    @if $fontWeight {
+        font-weight: $fontWeight;
+    }
+}
+
+@mixin center-block() {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin textDefault() {
+    font-family: $roboto-ff;
+    font-style: normal;
+    font-weight: 400;
+}

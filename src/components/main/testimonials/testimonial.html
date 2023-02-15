@@ -1,0 +1,58 @@
+<div class="testimonial">
+    <include
+        src="./components/common/title.html"
+        locals='{
+            "title": "testimonials"
+        }'
+    >
+
+    </include>
+    <div class="testimonial__container"> 
+        <ul class="testimonial-list">   
+            <include
+                src="./components/main/testimonials/testimonial-item.html"
+                locals='{
+                    "avatar": "../assets/images/person__1.svg",
+                    "name": "LULU HOFFMAN",
+                    "job": "Marketing Consultant at okodesign.net",
+                    "testimonial": "If you are an entrepreneur, you know that your success cannot depend on the opinions of others. Like the wind, opinions change…like the weather, opinions change frequently.",
+                    "data": "[`../assets/icons/linkedin.svg`, `../assets/icons/twitter __2.svg`, `../assets/icons/google-plus.svg`]"
+                }'
+            >
+            </include>
+            <include
+                src="./components/main/testimonials/testimonial-item.html"
+                locals='{
+                    "avatar": "../assets/images/person__2.svg",
+                    "name": "ELSIE DUNKAN",
+                    "job": "Project Manager at okodesign.net",
+                    "testimonial": "Ever heard of the Fuller Brush Man? You know, those legendary guys who came knocking on the front doors of America, selling brushes, mops and cleaners?",
+                    "data": "[`../assets/icons/facebook__2.svg`, `../assets/icons/twitter __2.svg`]"
+                }'
+            >
+            </include>
+            <include
+                src="./components/main/testimonials/testimonial-item.html"
+                locals='{
+                    "avatar": "../assets/images/person__3.svg",
+                    "name": "DUSTIN GONZALES",
+                    "job": "CEO at hofmannui.net",
+                    "testimonial": "Do you remember the story of “The Wizard of Oz”? In this story we saw the characters of Dorothy, who had wanted to run away from home because she thought there was a better place somewhere.",
+                    "data": "[`../assets/icons/facebook__2.svg`, `../assets/icons/linkedin.svg`, `../assets/icons/google-plus.svg`]"
+                }'
+            >
+            </include>
+            <include
+                src="./components/main/testimonials/testimonial-item.html"
+                locals='{
+                    "avatar": "../assets/images/person__4.svg",
+                    "name": "LAURA PARKS",
+                    "job": "UX Lead at hofmannui.net",
+                    "testimonial": "They are big, bold and beautiful. Billboards have been around for quite a while. In almost all places nowadays you can find billboards of just about every product there is in the market. No matter how you see it, billboard advertising is on the rise.",
+                    "data": "[`../assets/icons/facebook__2.svg`, `../assets/icons/linkedin.svg`, `../assets/icons/twitter __2.svg`, `../assets/icons/google-plus.svg`]"
+                }'
+            >
+            </include>
+        </ul>
+    </div>
+</div>

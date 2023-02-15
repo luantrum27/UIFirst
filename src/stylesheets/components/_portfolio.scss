@@ -1,0 +1,423 @@
+@use "../abstracts/" as *;
+.portfolio {
+    padding: 66px 150px 71px 150px;
+    @include tablet() {
+        padding: 26px 24px 32px 26px;
+    }
+    .portfolio_big_device {
+        display: block;
+        @include tablet() {
+            display: block;
+        }
+        @include mobile() {
+            display: none;
+        }
+    }
+
+    .portfolio__slideshow {
+        margin-top: 54px;
+        @include tablet() {
+            margin-top: 26px;
+        }
+        .portfolio__slideshow-row {
+            @include flex($align: center);
+            gap: 0;
+            .slideshow-row__item:first-child {
+                flex: 1;
+            }
+            .slideshow-row__item:nth-child(2) {
+                flex: 2;
+            }
+            .slideshow-row__item {
+                position: relative;
+                margin-top: -3px;
+                img {
+                    width: 100%;
+                }
+                .description {
+                    @include absolute($top: 0, $left: 50%);
+                    color: #fff;
+                    width: 50%;
+                    padding: 40px 60px;
+                    @include tablet() {
+                        padding: 32px 22px;
+                    }
+                    @include mobile() {
+                        padding: 10px 25px;
+                        left: 0;
+                        width: 100%;
+                    }
+                    .description-header {
+                        @include flex($justify: space-between, $align: center);
+                    }
+                    .description-title {
+                        @include textDefault();
+                        font-size: 32px;
+                        line-height: 42px;
+                        letter-spacing: -0.025em;
+                        color: #ffffff;
+                        margin-bottom: 5px;
+                        @include tablet() {
+                            font-size: 24px;
+                            line-height: 32px;
+                        }
+                        @include mobile() {
+                            font-size: 16px;
+                            line-height: 32px;
+                        }
+                    }
+                    .description-sub-title {
+                        @include textDefault();
+                        font-size: 18px;
+                        line-height: 30px;
+                        letter-spacing: 0.0555556em;
+                        color: #ffffff;
+                        @include tablet() {
+                            font-size: 12px;
+                            line-height: 16px;
+                            letter-spacing: 0.0666667em;
+                        }
+                        @include mobile() {
+                            font-size: 12px;
+                            line-height: 16px;
+                            letter-spacing: 0.0666667em;
+                        }
+                    }
+                    .description-text {
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #ffffff;
+                        @include tablet() {
+                            font-size: 11px;
+                            line-height: 16px;
+                        }
+                    }
+                    .description-line {
+                        width: 32px;
+                        height: 6px;
+                        background-color: #fff;
+                        margin: 31px 0 38px 0;
+                        @include tablet() {
+                            width: 16px;
+                            height: 4px;
+                            margin: 20px 0 24px 0;
+                        }
+                        @include mobile() {
+                            width: 14px;
+                            height: 2px;
+                            margin: 18px 0 20px 0;
+                        }
+                    }
+                    .interact {
+                        @include flex($align: center);
+                        margin-top: 24px;
+                        @include tablet() {
+                            margin-top: 10px;
+                        }
+                        gap: 30;
+                        .interact-item {
+                            @include flex($align: center);
+                            gap: 6;
+                            .interact-icon {
+                                width: 18px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .interact-number {
+                                @include flex($direction: column);
+                                gap: 6;
+                                p {
+                                    @include textDefault();
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                    @include tablet() {
+                                        font-size: 11px;
+                                    }
+                                }
+                                .interact-sub-number {
+                                    display: block;
+                                    @include tablet() {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reverse {
+            .slideshow-row__item:first-child {
+                flex: 2;
+            }
+            .slideshow-row__item:nth-child(2) {
+                flex: 1;
+            }
+        }
+        .slideshow-linear {
+            .slideshow-row__item:first-child {
+                flex: 1;
+                .description {
+                    @include absolute($top: 0, $left: 0);
+                    color: #4b4b4b;
+                    width: 100%;
+
+                    .description-sub-title,
+                    .description-title {
+                        color: #4b4b4b;
+                    }
+
+                    .description-text {
+                        @include mobile() {
+                            font-size: 32px;
+                            line-height: 28px;
+                            color: #4b4b4b;
+                        }
+                    }
+                    .description-line {
+                        background-color: #4b4b4b;
+                    }
+                    .interact {
+                        @include flex($align: center);
+                        margin-top: 24px;
+                        gap: 30;
+                        .interact-item {
+                            @include flex($align: center);
+                            gap: 6;
+                            .interact-icon {
+                                width: 18px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .interact-number {
+                                @include flex($direction: column);
+                                gap: 6;
+                            }
+                        }
+                    }
+                }
+            }
+            .slideshow-row__item:nth-child(2) {
+                flex: 1;
+                .description {
+                    @include absolute($top: 0, $left: 0);
+                    color: #4b4b4b;
+                    width: 100%;
+
+                    .description-sub-title,
+                    .description-title {
+                        color: #4b4b4b;
+                    }
+
+                    .description-text {
+                        @include textDefault();
+                        font-size: 64px;
+                        line-height: 54px;
+                        letter-spacing: -0.03125em;
+                        color: #4b4b4b;
+                        @include tablet() {
+                            display: block;
+                            width: 50%;
+                            font-size: 36px;
+                            line-height: 32px;
+                            letter-spacing: -0.0277778em;
+                        }
+                    }
+                    .description-line {
+                        background-color: #4b4b4b;
+                    }
+                    .interact {
+                        @include flex($align: center);
+                        margin-top: 24px;
+                        gap: 30;
+                        .interact-item {
+                            @include flex($align: center);
+                            gap: 6;
+                            .interact-icon {
+                                width: 18px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .interact-number {
+                                @include flex($direction: column);
+                                gap: 6;
+                            }
+                        }
+                    }
+                }
+            }
+            .slideshow-row__item:nth-child(3) {
+                flex: 1;
+            }
+        }
+    }
+}
+
+.portfolio_small_device {
+    display: none;
+    @include tablet() {
+        display: none;
+    }
+    @include mobile() {
+        display: block;
+    }
+    .portfolio__slideshow-row {
+        .slideshow-row__item {
+            flex: 1 !important;
+            margin-top: -3px;
+            .description {
+                .description-title {
+                    @include textDefault();
+                    font-size: 32px;
+                    line-height: 42px;
+                    letter-spacing: -0.025em;
+                    color: #ffffff;
+                    margin-bottom: 5px;
+                    @include tablet() {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+                .description-sub-title {
+                    @include textDefault();
+                    font-size: 18px;
+                    line-height: 30px;
+                    letter-spacing: 0.0555556em;
+                    color: #ffffff;
+                    @include tablet() {
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.0666667em;
+                    }
+                }
+                .description-text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #ffffff;
+                    @include tablet() {
+                        font-size: 11px;
+                        line-height: 16px;
+                    }
+                }
+                .description-line {
+                    width: 32px;
+                    height: 6px;
+                    background-color: #fff;
+                    margin: 31px 0 38px 0;
+                    @include tablet() {
+                        width: 16px;
+                        height: 4px;
+                        margin: 20px 0 24px 0;
+                    }
+                }
+                .interact {
+                    @include flex($align: center);
+                    margin-top: 24px;
+                    @include tablet() {
+                        margin-top: 10px;
+                    }
+                    gap: 30;
+                    .interact-item {
+                        @include flex($align: center);
+                        gap: 6;
+                        .interact-icon {
+                            width: 18px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .interact-number {
+                            @include flex($direction: column);
+                            gap: 6;
+                            p {
+                                @include textDefault();
+                                font-size: 12px;
+                                line-height: 24px;
+                                @include tablet() {
+                                    font-size: 11px;
+                                }
+                            }
+                            .interact-sub-number {
+                                display: block;
+                                @include tablet() {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    @include flex($align: center, $justify: center);
+    gap: 60;
+    margin-top: 70px;
+    @include tablet() {
+        margin-top: 40px;
+        gap: 38;
+    }
+    @include mobile() {
+        margin-top: 40px;
+        padding: 0 39px;
+        gap: 28;
+    }
+    
+    .btn__pagination {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    .pagination__list--item {
+        p {
+            @include textDefault();
+            font-size: 18px;
+            line-height: 24px;
+            color: #4b4b4b;
+            @include tablet() {
+                font-size: 12px;
+            }
+        }
+    }
+    .pagination__last-item {
+        display: block;
+        @include tablet() {
+            display: block;
+        }
+        @include mobile() {
+            display: none;
+        }
+    }
+    .pagination-selected {
+        width: 32px;
+        height: 32px;
+        background: #ffffff;
+        text-align: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 100rem;
+        p {
+            line-height: 32px;
+            color: #ebcb80;
+        }
+    }
+
+    .pagination__list {
+        @include flex($align: center, $justify: center);
+        margin-top: -5px;
+        gap: 35;
+        @include tablet() {
+            gap: 39;
+        }
+        @include mobile() {
+            gap: 28;
+            @include flex($align: center, $justify: space-between);
+        }
+
+    }
+}

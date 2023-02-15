@@ -1,0 +1,27 @@
+<nav id="navbar">
+    <h1 class="navbar__title">H.</h1>
+    <ul class="navbar-categories">
+        <include 
+        src="./components/header/navbar/navbar_categories.html"
+        locals='{
+            "list": "[`hotels`, `airlines`, `vacations`, `find more`]",
+            "classItem": "navbav-category",
+            "classLink": "navbar-link"
+        }'  
+        ></include>
+    </ul>
+    <ul class="navbar-media">
+        <include 
+        src="./components/header/navbar/navbar_media.html"
+        locals='{
+            "listImage": "[`../assets/icons/twitter.svg`, `../assets/icons/facebook.svg`, `../assets/icons/instagram.svg`]",
+            "classItem": "navbav-media-item",
+            "classLink": "navbar-media-link",
+            "classImage": "navbar-media-icon"
+        }'  
+        ></include>
+    </ul>
+    <div id="navbar-bars-icon">
+        <img src="../assets/icons/Hamburger.svg" />
+    </div>
+</nav>

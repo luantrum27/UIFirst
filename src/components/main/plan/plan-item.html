@@ -1,0 +1,17 @@
+<li class="plan-list__item {{ classType }}">
+    <div class="plan-item__content">
+        <p class="plan-type">{{ type }}</p>
+        <article class="plan-cost">
+            <p class="plan-unit">{{ unitCost }}</p>
+            <p class="plan-price">{{ cost }}</p>
+        </article>
+        <p class="plan-time-unit">{{ unitTime }}</p>
+        <article class="plan-description">
+            <each loop="description in {{ descriptions }}">
+                <p>{{ description }}</p>
+            </each>
+        </article>
+        <button class="btn-purchase">PURCHASE</button>
+    </div>
+    <div class="plan-item__overlay {{ classOverlay }}"></div>
+</li>

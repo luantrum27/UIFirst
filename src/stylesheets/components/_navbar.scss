@@ -1,0 +1,73 @@
+@use "../abstracts/" as *;
+#navbar {
+    @include flex($align: center, $justify: space-between);
+    .navbar__title {
+        color: #EBCB80;
+        flex: 2;
+        @include tablet() {
+            flex: 1.33;
+        }
+        @include mobile() {
+            flex: none;
+        }
+    }
+    .navbar-categories {
+        width: 510px;
+        flex: 3;
+        @include flex($align: center, $justify: space-between);
+        @include tablet() {
+            width: 350px;
+            flex: 2.5;
+        }
+        @include mobile() {
+            display: none;
+        }
+    }
+    .navbav-category {
+        .navbar-link {
+            @include formatText($fontSize: 18px, $color: #fff, $lineHeight: 21px, $letterSpacing: 0.0555em, $textTransform: uppercase);
+            @include tablet() {
+                @include formatText($fontSize: 12px, $color: #fff, $lineHeight: 16px, $letterSpacing: 0.0832079em, $textTransform: uppercase);
+            }
+        }
+    }
+
+    .navbar-media {
+        flex: 2;
+        &:first-child {
+            margin-left: 0px;
+        }
+        @include tablet() {
+            flex: 1.33;
+        }
+        @include flex($align: center, $justify: flex-end);
+        @include mobile() {
+            flex: none;
+        }
+        &-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 45px;
+            @include tablet() {
+                width: 19.62px;
+                height: 15.94px;
+                margin-left: 21.08px;
+            }
+            @include mobile() {
+                width: 16px;
+                height: 16px;
+                margin-left: 21.08px;
+            }
+            
+        }
+        
+        
+    }
+
+    #navbar-bars-icon {
+        display: none;
+        @include mobile() {
+            display: block;
+        }
+    }
+}

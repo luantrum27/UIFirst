@@ -1,0 +1,65 @@
+@use "../abstracts/" as *;
+
+#header {
+    width: 100%;
+    height: 768px;
+    position: relative;
+    @include tablet() {
+        height: 564px;
+    }
+    &__bgr {
+        height: 100%;
+    }
+
+    .container {
+        @include absolute($top: 48px, $right: 150px, $bottom: 38.33px, $left: 150px);
+        @include tablet() {
+            @include absolute($top: 32px, $right: 24px, $bottom: 32px, $left: 24px);
+        }
+        @include mobile() {
+            @include absolute($top: 21px, $right: 15px, $bottom: 21px, $left: 15px);
+        }
+        .header-content {
+            width: 555px;
+            margin: 0 auto;
+            display: block;
+            @include tablet() {
+                width: 524px;
+                margin: 0 auto;
+            }
+            @include mobile() {
+                width: 240px;
+                margin: 0 auto;
+            }
+            .header-title {
+                margin-top: 75px;
+                @include formatText($fontSize: 44px, $color: #fff, $lineHeight: 48px, $letterSpacing: -0.0363636em, $textAlign: center);
+                @include tablet() {
+                    @include formatText($fontSize: 32px, $color: #fff, $lineHeight: 36px, $letterSpacing: -0.025em, $textAlign: center);
+                }
+                @include mobile() {
+                    margin-top: 130px;
+                    @include formatText($fontSize: 20px, $color: #fff, $lineHeight: 24px, $letterSpacing: -0.04em, $textAlign: center);
+                }
+            }
+            .header-video {
+                width: 100%;
+                height: 324px;
+                margin: 50px auto 0 auto;
+                @include tablet() {
+                    width: 345.63px;
+                    height: 201.8px;
+                    margin: 34px auto 0 auto;
+                    display: block;
+                }
+                @include mobile() {
+                    width: 240px;
+                    height: 140px;
+                    margin: 35px auto 0 auto;
+                }
+            }
+        }                                                                     
+    }
+}
+
+                    

@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+#main {
+    .main-download {
+        position: relative;
+        width: 100%;
+        @include mobile() {
+            height: 311.65px;
+        }
+        img {
+            width: 100%; 
+            height: 100%;
+        }
+        &-content {
+            @include absolute($top: 0);
+            padding: 163px 443px 0 443px;
+            @include tablet() {
+                padding: 57px 149px;
+            }
+            @include mobile() {
+                padding: 45px 40px;
+            }
+            h1 {
+                @include formatText($fontSize: 44px, $lineHeight: 48px, $color: #fff, $letterSpacing: -0.0363636em, $textAlign: center);
+                @include tablet() {
+                    @include formatText($fontSize: 32px, $lineHeight: 40px, $letterSpacing: -0.025em, $color: #fff, $textAlign: center);
+                }
+                @include mobile() {
+                    @include formatText($fontSize: 20px, $lineHeight: 40px, $letterSpacing: -0.025em, $color: #fff, $textAlign: center);
+                }
+            }
+            p {
+                @include formatText($fontSize: 16px, $lineHeight: 24px, $color: #fff, $textAlign: center);
+                margin-top: 23px;
+                margin-bottom: 42px;
+                @include tablet() {
+                    @include formatText($fontSize: 11px, $lineHeight: 16px, $color: #fff, $textAlign: center);
+                    margin-top: 26px;
+                    margin-bottom: 29px;
+                }
+                @include mobile() {
+                    @include formatText($fontSize: 11px, $lineHeight: 16px, $color: #fff, $textAlign: center);
+                    margin-top: 7px;
+                    margin-bottom: 20px;
+                }
+            }
+            .btn-download {
+                background-color: #EBCB80;
+                outline: none;
+                border: none;
+                border-radius: 50px;
+                width: 210px;
+                height: 48px;
+                @include center-block();
+                @include tablet() {
+                    width: 140px;
+                    height: 40px;
+                    @include formatText($fontSize: 11px, $lineHeight: 13px, $letterSpacing:0.0727273em, $color: #4B4B4B, $textAlign: center);
+                }
+                @include mobile() {
+                    width: 140px;
+                    height: 32px;
+                    @include formatText($fontSize: 11px, $lineHeight: 13px, $color: #4B4B4B, $textAlign: center);
+                }
+            }
+        }
+    }
+}

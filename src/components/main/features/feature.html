@@ -1,0 +1,44 @@
+<div id="feature">
+    <hgroup class="feature-group-heading">
+        <include
+            src="./components/common/title.html"
+            locals='{
+                "title": "features"
+            }'
+        >
+
+        </include>
+        <h4 class="feature-sub-title">We're taking it to the next level</h4>
+    </hgroup>
+    <div class="feature-content">
+        <ul class="feature-list">
+            <include
+                src="./components/main/features/feature-list.html"
+                locals='{
+                    "image": "../assets/icons/responsive.svg",
+                    "title": "Responsive Layout",
+                    "description": "The past few years have seen a dramatic change in the public perception of cosmetic surgery."
+                }'>
+            </include>
+            <include
+                src="./components/main/features/feature-list.html"
+                locals='{
+                    "image": "../assets/icons/diamond.svg",
+                    "title": "Pixel Perfect",
+                    "description": "About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about."
+                }'>
+            </include>
+            <include
+                src="./components/main/features/feature-list.html"
+                locals='{
+                    "image": "../assets/icons/layers.svg",
+                    "title": "ORGANIZED LAYERS",
+                    "description": "Are you one of the thousands of Iphone owners who has no idea that they can get free games for their Iphone?"
+                }'>
+            </include>
+        </ul>
+        <figure class="feature-image">
+            <img src="../assets/images/mac.svg" />
+        </figure>
+    </div>
+</div>
